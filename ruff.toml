@@ -1,0 +1,38 @@
+target-version = 'py310' # Python version used by this project.
+exclude = ["/opt/homebrew/**", "analyze/**"]
+
+[lint]
+select = [
+    'F',  # pyflakes
+    'E',  # pycodestyle
+    'W',  # pycodestyle warnings
+    'I',  # isort
+    'D',  # pydocstyle
+    'UP', # pyupgrade
+    'N',  # pep8-naming
+    'TID252' # prohibit-relative-import
+]
+
+ignore = [
+    'D105', # Missing docstring in magic methods.
+    'D107', # Missing docstring in public __init__ methods.
+    'D205', # Missing blank line after summary.
+    'E402', # Module import is not at the top of the file.
+    'D415', # First line should end with punctuation.
+    'N805', # First argument of a method should be named self.
+    'N801', # Allow class names that do not follow CapWords.
+    'D211', # Allow a blank line before class docstrings.
+    'E501', # Line too long.
+    'UP006', # Use built-in generics instead of typing aliases.
+    'UP035', # Deprecated import from typing.
+    'D101', # Missing docstring in public class
+    'D106', # Missing docstring in public nested class
+    'N999',
+]
+
+[lint.pydocstyle]
+convention = 'google'
+
+[lint.per-file-ignores]
+'__init__.py' = ['F401', 'D'] # Ignore selected rules for __init__.py files.
+'model.py' = ['D102'] # Ignore docstring requirements for forward() methods.

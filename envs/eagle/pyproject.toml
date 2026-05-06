@@ -1,0 +1,22 @@
+[project]
+name = "eagle"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "absl-py>=2.4.0",
+    "decord>=0.6.0",
+    "nltk>=3.9.4",
+    "numpy>=2.4.4",
+    "peft>=0.18.1",
+    "pillow>=12.2.0",
+    "pycocoevalcap>=1.2",
+    "python-dotenv>=1.2.2",
+    "qwen-vl-utils>=0.0.14",
+    "rouge-score>=0.1.2",
+    "torch>=2.7.0",
+    "torchvision>=0.22.0",
+    "tqdm>=4.67.3",
+    "transformers==4.55.4",
+]

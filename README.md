@@ -168,36 +168,4 @@ bash scripts/eval/evaluation.sh
 ```
 
 The evaluation script expects prediction JSON files and runs the task-specific bundle evaluators with `envs/download`.
-
-Spatio-temporal evaluation:
-
-```bash
-uv run --project envs/download python -m scripts.eval.run_spatio_temporal_grounding_bundle \
-  --model <model_name_for_output> \
-  --pred-jsons \
-  data/eval/<model>/spatio_temporal/<prediction_1>.json \
-  data/eval/<model>/spatio_temporal/<prediction_2>.json
-```
-
-Temporal evaluation:
-
-```bash
-uv run --project envs/download scripts/eval/run_temporal_grounding_bundle.py \
-  --model <model_name_for_output> \
-  --pred-jsons \
-  data/eval/<model>/temporal/<prediction_1>.json \
-  data/eval/<model>/temporal/<prediction_2>.json
-```
-
-Spatial evaluation:
-
-```bash
-uv run --project envs/download scripts/eval/run_spatio_temporal_grounding_bundle.py \
-  --task spatial \
-  --model <model_name_for_output> \
-  --pred-jsons \
-  data/eval/<model>/spatial/<prediction_1>.json \
-  data/eval/<model>/spatial/<prediction_2>.json
-```
-
-The examples in `scripts/eval/evaluation.sh` show the expected naming convention under `data/eval/<model>/<task>/`.
+See `src/eval/` for the metric implementations and JSON-to-CSV conversion logic.

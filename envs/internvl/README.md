@@ -1,0 +1,2 @@
+# Error log
+when you use OpenGVLab/InternVL3_5-8B-hf as model_id, make sure you set height and width as 448 in  ~/.cache/huggingface/hub/models--OpenGVLab--InternVL3_5-8B-hf/snapshots/741a7d03020411e666c6109218ab71e08151ef86/video_preprocessor_config.json 

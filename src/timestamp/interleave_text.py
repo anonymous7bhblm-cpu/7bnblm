@@ -1,0 +1,1 @@
+"""Interleaved textual timestamp encoding utilities."""
